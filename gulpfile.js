@@ -67,6 +67,7 @@ gulp.task('scripts', function() {
     app.addScript([
         config.bowerDir+'/jquery/dist/jquery.js',
         config.bowerDir+'/bootstrap/dist/js/bootstrap.js',
+        config.scriptsDir+'/jquery.interactive_bg.js',
         config.scriptsDir+'/main.js'
     ], 'site.js')
 });
@@ -76,14 +77,6 @@ gulp.task('scripts', function() {
 gulp.task('fonts', function() {
     app.copy(
         config.bowerDir+'/font-awesome/fonts/*',
-        'public/fonts'
-    );
-    app.copy(
-        config.bowerDir+'/fjallaOne/**/*.ttf',
-        'public/fonts'
-    );
-    app.copy(
-        config.bowerDir+'/openSans/**/*.ttf',
         'public/fonts'
     );
 });
